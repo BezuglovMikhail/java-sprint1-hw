@@ -54,21 +54,18 @@ public class StepTracker {
         return goalStep;
     }
 
-    int likeSeries(int month) {
-        int max = 0;
+    int likeSeries(int month) { // Артём, спасибо тебе за то что помогаешь разобраться в нюансах.
+        int maxSeries = 0;      // Надеюсь теперь метод работает верно.
+        int max;
         int j = 0;
         for (int i = 0; i < 30; i++) {
-
             if (stepDayMonth[month][i] >= goalStep) {
                 j = j + 1;
-                if (j == 30) { // Артём, я реализавал защиту от прилежных людей в этой строке.
-                    max = j;   // Прошу проверь корректно ли работает условие. Я проверил вроде работает корректно. Скриншот во вложении.
-                }
-
-            } else if (max <= j) {
                 max = j;
-                j = 0;
-               }
-        } return max;
+                if (maxSeries <= max) {
+                    maxSeries = max;
+                }
+            } else { j = 0; }
+        } return maxSeries;
     }
 }
