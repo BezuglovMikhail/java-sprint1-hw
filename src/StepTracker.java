@@ -16,11 +16,12 @@ public class StepTracker {
 
     void printStepStatistics(int month) {
         printAllStepMonth(month);
-        allStepMonth(month);
+        //allStepMonth(month);
         System.out.println("\n" + "Общее количество шагов за " + month + " - месяц: " + allStepMonth(month));
         System.out.println("Максимальное пройденное количество шагов в месяце " + findMaxStepMonth(month));
         System.out.println("Среднее количество шагов = " + allStepMonth(month) / 30);
-        converter.convert(allStepMonth(month));
+        System.out.println("Пройденная дистанция в (км): " + converter.convertStep(allStepMonth(month))+ ".");
+        System.out.println("Количество сожжёных килоколорий: " + converter.convertCalories(allStepMonth(month)) + ".");
         System.out.println("Лучшая серия в этом месяце: " + likeSeries(month));
     }
 
@@ -60,8 +61,8 @@ public class StepTracker {
 
             if (stepDayMonth[month][i] >= goalStep) {
                 j = j + 1;
-                if (j == 30) {
-                    max = j;
+                if (j == 30) { // Артём, я реализавал защиту от прилежных людей в этой строке.
+                    max = j;   // Прошу проверь корректно ли работает условие. Я проверил вроде работает корректно. Скриншот во вложении.
                 }
 
             } else if (max <= j) {

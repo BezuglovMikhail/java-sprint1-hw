@@ -8,10 +8,10 @@ public class Converter {
         caloriesStep = 0.050;
         }
 
-        void convert(int allStepMonth) {
-        double way = allStepMonth * lengthStep;
-            System.out.println("Пройденная дистанция в (км): " + way + ".");
-        double burnCalories = allStepMonth * caloriesStep;
-                System.out.println("Количество сожжёных килоколорий: " + burnCalories + "." );
+        double convertStep(int allStepMonth) {
+             return allStepMonth * lengthStep;
         }
+        double convertCalories(int allStepMonth) {
+            return allStepMonth * caloriesStep;
+    }
 }
