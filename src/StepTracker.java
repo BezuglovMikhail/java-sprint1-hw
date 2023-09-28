@@ -23,7 +23,7 @@ public class StepTracker {
         System.out.println("Максимальное пройденное количество шагов в месяце " + findMaxStepMonth(month));
         System.out.println("Среднее количество шагов = " + allStepMonth(month) / MONTH_DAY_COUNT);
         System.out.println("Пройденная дистанция в (км): " + converter.convertStep(allStepMonth(month)) + ".");
-        System.out.println("Количество сожжёных килоколорий: " + converter.convertCalories(allStepMonth(month)) + ".");
+        System.out.println("Количество сожженных килокалорий: " + converter.convertCalories(allStepMonth(month)) + ".");
         System.out.println("Лучшая серия в этом месяце: " + likeSeries(month));
     }
 
