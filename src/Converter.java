@@ -4,10 +4,8 @@ public class Converter {
     double caloriesStep;
 
     Converter() {
-
         lengthStep = 0.00075; // один шаг равен 75 см.
         caloriesStep = 0.050; // один шаг сжигает 50 калорий.
-
         }
 
         double convertStep(int allStepMonth) {
